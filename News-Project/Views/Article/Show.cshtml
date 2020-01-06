@@ -1,0 +1,37 @@
+﻿@model News_Project.Models.Article
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<h1>Afisare articol</h1>
+
+
+<div class="panel panel-default">
+    @Html.Partial("ArticleInfo", Model)
+    <div class="panel-footer">
+        <a class="btn btn-success" href="/Article/Edit/@Model.Id">Modifica articol</a>
+        <br />
+    </div>
+</div>
+
+
+@using (Html.BeginForm(actionName: "Delete", controllerName: "Article", method: FormMethod.Post, routeValues: new { id = @Model.Id }))
+{
+    <!--@Html.HiddenFor(m => m.Id) -->
+
+    @Html.HttpMethodOverride(HttpVerbs.Delete)
+    <br />
+    <button class="btn btn-success" type="submit">Sterge articol</button>
+
+}
+
+<br />
+<hr />
+<a class="btn btn-success" href="/Article/Index">Inapoi la articole</a>
+<br />
+<br />
+<a class="btn btn-info" href="/Article/New">Adauga articol</a>
+<br />
+
+

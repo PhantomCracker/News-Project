@@ -1,0 +1,23 @@
+﻿@model News_Project.Models.Category
+@{
+    ViewBag.Title = "Afisare categorie";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>@Model.CategoryName</p>
+
+@using (Html.BeginForm(actionName: "Delete", controllerName: "Category", routeValues: new { id = @Model.CategoryId }))
+{
+
+    @Html.HttpMethodOverride(HttpVerbs.Delete)
+
+    <button class="btn btn-success" type="submit">Sterge categoria</button>
+}
+<br />
+<a class="btn btn-success" href="/Category/Index/">Afisare lista categorii</a>
+
+<br />
+<hr />
+<br />
+
