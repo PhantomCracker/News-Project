@@ -10,7 +10,7 @@ namespace News_Project.Controllers
     [Authorize(Roles = "Administrator")]
     public class CategoryController : Controller
     {
-        private ArticleDBContext db = new ArticleDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Category
         public ActionResult Index()

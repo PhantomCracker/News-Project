@@ -72,7 +72,7 @@ namespace News_Project.Controllers
                 {
                     db.Articles.Add(article);
                     db.SaveChanges();
-                    TempData["message"] = "Articolul a fost adaugat!";
+                    TempData["message"] = "Stirea a fost adaugat!";
                     return RedirectToAction("Index");
                 }
                 else
@@ -100,7 +100,7 @@ namespace News_Project.Controllers
             }
             else
             {
-                TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui articol care nu va apartine!";
+                TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unei stiri care nu va apartine!";
                 return RedirectToAction("Index");
             }
 
@@ -127,13 +127,13 @@ namespace News_Project.Controllers
                             article.Date = requestArticle.Date;
                             article.CategoryId = requestArticle.CategoryId;
                             db.SaveChanges();
-                            TempData["message"] = "Articolul a fost modificat!";
+                            TempData["message"] = "Stirea a fost modificat!";
                         }
                         return RedirectToAction("Index");
                     }
                     else
                     {
-                        TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui articol care nu va apartine!";
+                        TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unei stiri care nu va apartine!";
                         return RedirectToAction("Index");
                     }
 
@@ -160,12 +160,12 @@ namespace News_Project.Controllers
             {
                 db.Articles.Remove(article);
                 db.SaveChanges();
-                TempData["message"] = "Articolul a fost sters!";
+                TempData["message"] = "Stirea a fost stearsa!";
                 return RedirectToAction("Index");
             }
             else
             {
-                TempData["message"] = "Nu aveti dreptul sa stergeti un articol care nu va apartine!";
+                TempData["message"] = "Nu aveti dreptul sa stergeti o stire care nu va apartine!";
                 return RedirectToAction("Index");
             }
 

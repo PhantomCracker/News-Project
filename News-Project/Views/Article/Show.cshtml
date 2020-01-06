@@ -4,13 +4,13 @@
     ViewBag.Title = "Show";
 }
 
-<h1>Afisare articol</h1>
+<h1>Afisare stire</h1>
 
 
 <div class="panel panel-default">
     @Html.Partial("ArticleInfo", Model)
     <div class="panel-footer">
-        <a class="btn btn-success" href="/Article/Edit/@Model.Id">Modifica articol</a>
+        <a class="btn btn-success" href="/Article/Edit/@Model.Id">Modifica stire</a>
         <br />
     </div>
 </div>
@@ -22,16 +22,16 @@
 
     @Html.HttpMethodOverride(HttpVerbs.Delete)
     <br />
-    <button class="btn btn-success" type="submit">Sterge articol</button>
+    <button class="btn btn-success" type="submit">Sterge stire</button>
 
 }
 
 <br />
 <hr />
-<a class="btn btn-success" href="/Article/Index">Inapoi la articole</a>
+<a class="btn btn-success" href="/Article/Index">Inapoi la stiri</a>
 <br />
 <br />
-<a class="btn btn-info" href="/Article/New">Adauga articol</a>
+<a class="btn btn-info" href="/Article/New">Adauga stire</a>
 <br />
 
 

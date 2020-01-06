@@ -17,7 +17,7 @@ namespace News_Project.Models
         [StringLength(20, ErrorMessage = "Titlul nu poate avea mai mult de 20 caractere")]
         public string Title { get; set; }
 
-        [Required(ErrorMessage = "Continutul articolului este obligatoriu")]
+        [Required(ErrorMessage = "Continutul stirii este obligatoriu")]
         public string Content { get; set; }
 
         [DataType(DataType.DateTime, ErrorMessage = "Campul trebuie sa contina data si ora")]

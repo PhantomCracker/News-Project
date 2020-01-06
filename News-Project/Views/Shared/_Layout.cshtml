@@ -21,14 +21,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Afisare articole", "Index", "Article")</li>
+                    <li>@Html.ActionLink("Afisare stiri", "Index", "Article")</li>
                     @if (User.IsInRole("Administrator"))
                     {
                         <li>@Html.ActionLink("Afisare categorii", "Index", "Category")</li>
                     }
                     @if (User.IsInRole("Editor") || User.IsInRole("Administrator"))
                     {
-                        <li>@Html.ActionLink("Adaugare articol", "New", "Article")</li>
+                        <li>@Html.ActionLink("Adaugare stire", "New", "Article")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

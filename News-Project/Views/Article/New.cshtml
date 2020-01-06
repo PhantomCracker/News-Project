@@ -1,7 +1,7 @@
 ﻿@model News_Project.Models.Article
 
 @{
-    ViewBag.Titlu = "Adaugare articol";
+    ViewBag.Titlu = "Adaugare stire";
 }
 
 <h2>@ViewBag.Titlu</h2>
@@ -11,14 +11,14 @@
 {
     @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
-    @Html.Label("Title", "Titlu Articol")
+    @Html.Label("Title", "Titlu Stire")
     <br />
     @Html.TextBox("Title", null, new { @class = "form-control" })
     @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
     <br />
     <br />
 
-    @Html.Label("Content", "Continut Articol")
+    @Html.Label("Content", "Continut Stire")
     <br />
     @Html.TextArea("Content", null, new { @class = "form-control" })
     @Html.ValidationMessage("Content", "", new { @class = "text-danger" })
@@ -35,6 +35,6 @@
     @Html.ValidationMessageFor(m => m.CategoryId, "", new { @class = "text-danger" })
     <br />
 
-    <button class="btn btn-sm btn-success" type="submit">Adauga articol</button>
+    <button class="btn btn-sm btn-success" type="submit">Adauga stire</button>
 }
 

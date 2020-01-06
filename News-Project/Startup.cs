@@ -36,6 +36,7 @@ namespace News_Project
                 var user = new ApplicationUser();
                 user.UserName = "admin@admin.com";
                 user.Email = "admin@admin.com";
+                
                 var adminCreated = UserManager.Create(user, "Administrator1!");
                 if (adminCreated.Succeeded)
                 {
