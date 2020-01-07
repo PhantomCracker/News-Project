@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - News Project</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -25,6 +25,7 @@
                     @if (User.IsInRole("Administrator"))
                     {
                         <li>@Html.ActionLink("Afisare categorii", "Index", "Category")</li>
+                        <li>@Html.ActionLink("Afisare utilizatori", "Index", "Users")</li>
                     }
                     @if (User.IsInRole("Editor") || User.IsInRole("Administrator"))
                     {
@@ -39,7 +40,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - News Project</p>
         </footer>
     </div>
 

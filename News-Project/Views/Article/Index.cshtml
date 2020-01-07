@@ -3,7 +3,7 @@
     ViewBag.Title = "Afisare stiri";
 }
 
-<h2>@ViewBag.Title</h2>
+<h2 class="text-center">@ViewBag.Title</h2>
 
 
 <hr />
@@ -13,20 +13,20 @@
     <h3 class="alert alert-info" role="alert">@ViewBag.message</h3>
 }
 
-@foreach (News_Project.Models.Article article in ViewBag.Articles)
-{
-    <div class="panel panel-default">
-        @Html.Partial("ArticleInfo", article)
-        <div class="panel-footer">
-            <a class="btn btn-sm btn-success" href="/Article/Show/@article.Id">Afisare stire</a>
+<div class="row">
+    @foreach (News_Project.Models.Article article in ViewBag.Articles)
+    {
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            @Html.Partial("ArticleInfo", article)
+            <div class="panel-footer">
+                <a class="btn btn-sm btn-success" href="/Article/Show/@article.Id">Afisare stire</a>
+            </div>
         </div>
     </div>
-    <br />
-}
+    }
+</div>
 
-<br />
-<a class="btn btn-success" href="/Category/Index">Afisare lista categorii</a>
-<br />
 <br />
 <a class="btn btn-info" href="/Article/New">Adauga stire</a>
 <br />

@@ -10,7 +10,7 @@
 <div class="panel panel-default">
     @Html.Partial("ArticleInfo", Model)
     <div class="panel-footer">
-        <a class="btn btn-success" href="/Article/Edit/@Model.Id">Modifica stire</a>
+        <a class="btn btn-warning" href="/Article/Edit/@Model.Id">Modifica stire</a>
         <br />
     </div>
 </div>
@@ -22,7 +22,7 @@
 
     @Html.HttpMethodOverride(HttpVerbs.Delete)
     <br />
-    <button class="btn btn-success" type="submit">Sterge stire</button>
+    <button class="btn btn-danger" type="submit">Sterge stire</button>
 
 }
 

@@ -3,9 +3,14 @@
 
 <div class="panel-heading">@Model.Title</div>
 <div class="panel-body">
-    Continut stire: <strong>@Model.Content</strong>
+    <strong>Continut stire:</strong> <p class="darkgray-text">@Model.Content</p>
     <br />
-    <span class="label label-success">@Model.Date</span>
-    <br />
-    <i class="glyphicon glyphicon-globe"></i> @Model.Category.CategoryName
+    <div class="panel-bottom">
+        <div class="date">
+            <span class="label label-success">@Model.Date</span>
+        </div>
+        <div class="category">
+            <i class="glyphicon glyphicon-globe"></i> @Model.Category.CategoryName
+        </div>
+    </div>
 </div>

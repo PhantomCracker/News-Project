@@ -1,4 +1,6 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700&display=swap');
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -7,6 +9,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +24,36 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.panel .panel-heading {
+    font-weight: 500;
+    text-align: center;
+}
+
+.panel-bottom {
+    display: flex !important;
+}
+.panel .panel-body .panel-bottom .category {
+    float: right;
+    text-align: right;
+    width: 100%;
+    color: #5bc0de;
+}
+.darkgray-text {
+    color: darkgray;
+}
+
+.new-article {
+    border-radius: 20px;
+    border: 1px solid darkgray;
+    padding: 30px;
+}
+
+.main-page {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

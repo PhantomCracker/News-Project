@@ -173,6 +173,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -254,6 +255,9 @@
     <Content Include="Views\Category\New.cshtml" />
     <Content Include="Views\Category\Show.cshtml" />
     <Content Include="Views\Shared\ArticleInfo.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Show.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

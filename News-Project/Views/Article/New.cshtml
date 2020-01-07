@@ -7,34 +7,36 @@
 <h2>@ViewBag.Titlu</h2>
 <br />
 
-@using (Html.BeginForm(actionName: "New", controllerName: "Article"))
-{
-    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+<div class="new-article">
+    @using (Html.BeginForm(actionName: "New", controllerName: "Article"))
+    {
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
-    @Html.Label("Title", "Titlu Stire")
-    <br />
-    @Html.TextBox("Title", null, new { @class = "form-control" })
-    @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
-    <br />
-    <br />
+        @Html.Label("Title", "Titlu Stire")
+        <br />
+        @Html.TextBox("Title", null, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+        <br />
+        <br />
 
-    @Html.Label("Content", "Continut Stire")
-    <br />
-    @Html.TextArea("Content", null, new { @class = "form-control" })
-    @Html.ValidationMessage("Content", "", new { @class = "text-danger" })
-    <br />
-    <br />
+        @Html.Label("Content", "Continut Stire")
+        <br />
+        @Html.TextArea("Content", null, new { @class = "form-control" })
+        @Html.ValidationMessage("Content", "", new { @class = "text-danger" })
+        <br />
+        <br />
 
-    @Html.Hidden("Date", DateTime.Now, new { @class = "form-control" })
+        @Html.Hidden("Date", DateTime.Now, new { @class = "form-control" })
 
-    <label>Selectati categoria</label>
+        <label>Selectati categoria</label>
 
-    @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categories, "Value", "Text"),
-        "Selectati categoria", new { @class = "form-control" })
+        @Html.DropDownListFor(m => m.CategoryId, new SelectList(Model.Categories, "Value", "Text"),
+            "Selectati categoria", new { @class = "form-control" })
 
-    @Html.ValidationMessageFor(m => m.CategoryId, "", new { @class = "text-danger" })
-    <br />
+        @Html.ValidationMessageFor(m => m.CategoryId, "", new { @class = "text-danger" })
+        <br />
 
-    <button class="btn btn-sm btn-success" type="submit">Adauga stire</button>
-}
+        <button class="btn btn-sm btn-success" type="submit">Adauga stire</button>
+    }
+</div>
 
